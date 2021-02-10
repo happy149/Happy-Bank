@@ -94,8 +94,15 @@ depositBtn.addEventListener("click", function(){
     // deposit input button k use korta hoba
     const depositAmount = document.getElementById("depositAmount").value;
     const depositNumber = parseFloat(depositAmount);
-    //deposit input k deposit a pathano
-    const currentDeposit = document.getElementById("currentDeposit").innerText;
+
+    
+    //if alert deta chai
+    if (depositNumber < 0){
+        alert("Deposit Number cannot be negative");
+    }
+else {
+     //deposit input k deposit a pathano
+     const currentDeposit = document.getElementById("currentDeposit").innerText;
     const currentDepositNumber = parseFloat(currentDeposit);
     const totalDeposit = depositNumber + currentDepositNumber;
     
@@ -106,6 +113,11 @@ depositBtn.addEventListener("click", function(){
 
     document.getElementById("depositAmount").value = "";
 
+
+
+}
+    
+   
 
 });
 // withdraw button event handler
